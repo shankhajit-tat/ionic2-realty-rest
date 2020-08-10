@@ -4,6 +4,7 @@ var express = require('express'),
     cors = require('cors'),
     properties = require('./server/property-service'),
     brokers = require('./server/broker-service'),
+    sfdcrest = require('./server/rest-service'),
     app = express();
 
 app.set('port', process.env.PORT || 5000);
@@ -23,6 +24,8 @@ app.delete('/properties/favorites/:id', properties.unfavorite);
 
 app.get('/brokers', brokers.findAll);
 app.get('/brokers/:id', brokers.findById);
+
+app.post('/newContact',sfdcrest.createContactRest);
 
 app.listen(app.get('port'), function () {
     console.log('Realty server listening on port ' + app.get('port'));
