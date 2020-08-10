@@ -26,7 +26,7 @@ app.get('/brokers', brokers.findAll);
 app.get('/brokers/:id', brokers.findById);
 
 app.post('/newcontact',sfdcrest.createContactRest);
-
+app.post('/updatecontact',sfdcrest.updateContactOutboundMessage);
 app.listen(app.get('port'), function () {
     console.log('Realty server listening on port ' + app.get('port'));
 });
