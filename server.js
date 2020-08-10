@@ -25,7 +25,7 @@ app.delete('/properties/favorites/:id', properties.unfavorite);
 app.get('/brokers', brokers.findAll);
 app.get('/brokers/:id', brokers.findById);
 
-app.post('/newContact',sfdcrest.createContactRest);
+app.post('/newcontact',sfdcrest.createContactRest);
 
 app.listen(app.get('port'), function () {
     console.log('Realty server listening on port ' + app.get('port'));
