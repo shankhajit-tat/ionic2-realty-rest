@@ -3,7 +3,7 @@ function createContactRest(req,res,next){
   res.status(201).end();
 }
 function updateContactOutboundMessage(req,res,next){
-    console.log('updateContactOutboundMessage Request Body=>'+JSON.stringify(req));
+    console.log('updateContactOutboundMessage Request Body=>'+JSON.stringify(req.body));
     /*var notification = req.body["soapenv:envelope"]["soapenv:body"][0]["notifications"][0];
     var sessionId = notification["sessionid"][0];
     var data = {};
