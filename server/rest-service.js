@@ -20,3 +20,4 @@ function updateContactOutboundMessage(req,res,next){
     res.status(201).end();
 }
 exports.createContactRest = createContactRest;
+exports.updateContactOutboundMessage = updateContactOutboundMessage;
