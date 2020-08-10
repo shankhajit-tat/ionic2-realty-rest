@@ -3,8 +3,8 @@ function createContactRest(req,res,next){
   res.status(201).end();
 }
 function updateContactOutboundMessage(req,res,next){
-    console.log('updateContactOutboundMessage Request Body=>'+JSON.stringify(req.body));
-    var notification = req.body["soapenv:envelope"]["soapenv:body"][0]["notifications"][0];
+    console.log('updateContactOutboundMessage Request Body=>'+JSON.stringify(req));
+    /*var notification = req.body["soapenv:envelope"]["soapenv:body"][0]["notifications"][0];
     var sessionId = notification["sessionid"][0];
     var data = {};
     if (notification["notification"] !== undefined) {
@@ -16,7 +16,7 @@ function updateContactOutboundMessage(req,res,next){
         }
       }); // do something #awesome with the data and sessionId
       console.log('data=>'+JSON.stringify(data));
-    }
+    }*/
     res.status(201).end();
 }
 exports.createContactRest = createContactRest;
